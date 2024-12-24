@@ -1,0 +1,13 @@
+.image{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    margin: 8px;
+    padding: 8px;
+}
+.div{
+    display: flex;
+}
+.name{
+    align-self: center;
+}
