@@ -35,7 +35,7 @@ const DeadliestRegions: React.FC<{
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:6060/api/analysis/highest-casualty-regions/");
+        const response = await fetch(`${import.meta.env.VITE_URL}/api/analysis/highest-casualty-regions/`);
         const result = await response.json();
         console.log("Fetched Data:", result); 
         setData(Array.isArray(result) ? result : []);

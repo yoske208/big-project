@@ -9,9 +9,8 @@ import {
   organizationByYear,
   organizationByZone,
 } from "../Components/fatchAPI";
-import { get } from "mongoose";
 import useFatch from "../Hooks/UseFetch";
-const url = "http://localhost:6060/crud/";
+const url = "${import.meta.env.VITE_URL}/crud/";
 
 export interface Props {
   children: React.ReactNode;

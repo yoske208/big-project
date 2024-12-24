@@ -1,6 +1,6 @@
 export const byID = async (id: string) => {
   try {
-    const response = await fetch(`http://localhost:6060/api/analysis/${id}`);
+    const response = await fetch(`${import.meta.env.VITE_URL}/api/analysis/${id}`);
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
     }
@@ -17,7 +17,7 @@ export const byID = async (id: string) => {
 export const getAllTerror = async () => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/analysis//deadliest-attack-types/`
+      `${import.meta.env.VITE_URL}/api/analysis//deadliest-attack-types/`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
@@ -35,7 +35,7 @@ export const getAllTerror = async () => {
 export const avgAttackType = async (attack_type: string) => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/analysis/deadliest-attack-types/${attack_type}`
+      `${import.meta.env.VITE_URL}/api/analysis/deadliest-attack-types/${attack_type}`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
@@ -53,7 +53,7 @@ export const avgAttackType = async (attack_type: string) => {
 export const avgAllZones = async () => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/analysis/highest-casualty-regions/`
+      `${import.meta.env.VITE_URL}/api/analysis/highest-casualty-regions/`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
@@ -71,7 +71,7 @@ export const avgAllZones = async () => {
 export const avgByZone = async (zone: string) => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/analysis/highest-casualty-regions/${zone}`
+      `${import.meta.env.VITE_URL}/api/analysis/highest-casualty-regions/${zone}`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
@@ -89,7 +89,7 @@ export const avgByZone = async (zone: string) => {
 export const getByYear = async (year: number) => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/analysis/incident-trends/${year}`
+      `${import.meta.env.VITE_URL}/api/analysis/incident-trends/${year}`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
@@ -107,7 +107,7 @@ export const getByYear = async (year: number) => {
 export const getByYears = async (year1: number, year2: number) => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/analysis/incident-trends/${year1}/${year2}`
+      `${import.meta.env.VITE_URL}/api/analysis/incident-trends/${year1}/${year2}`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
@@ -125,7 +125,7 @@ export const getByYears = async (year1: number, year2: number) => {
 export const get5ByBigOrganizatoion = async (organization: string) => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/relationships/top-groups/?get5=${organization}`
+      `${import.meta.env.VITE_URL}/api/relationships/top-groups/?get5=${organization}`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
@@ -143,7 +143,7 @@ export const get5ByBigOrganizatoion = async (organization: string) => {
 export const getByBigOrganizatoion = async (organization: string) => {
     try {
       const response = await fetch(
-        `http://localhost:6060/api/relationships/top-groups/?getbigs=${organization}`
+        `${import.meta.env.VITE_URL}/api/relationships/top-groups/?getbigs=${organization}`
       );
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
@@ -161,7 +161,7 @@ export const getByBigOrganizatoion = async (organization: string) => {
 export const organizationByYear = async (year1: number, year2: number) => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/analysis/incident-trends/${year1}/${year2}`
+      `${import.meta.env.VITE_URL}/api/analysis/incident-trends/${year1}/${year2}`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
@@ -179,7 +179,7 @@ export const organizationByYear = async (year1: number, year2: number) => {
 export const organizationBetweenYear = async (year1: number, year2: number) => {
     try {
       const response = await fetch(
-        `http://localhost:6060/api/analysis/incident-trends/${year1}/${year2}`
+        `${import.meta.env.VITE_URL}/api/analysis/incident-trends/${year1}/${year2}`
       );
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
@@ -197,7 +197,7 @@ export const organizationBetweenYear = async (year1: number, year2: number) => {
 export const organizationByZone = async (zone: string) => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/relationships/deadliest-regions/${zone}`
+      `${import.meta.env.VITE_URL}/api/relationships/deadliest-regions/${zone}`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
@@ -215,7 +215,7 @@ export const organizationByZone = async (zone: string) => {
 export const organizationAndYear = async (gname: string) => {
   try {
     const response = await fetch(
-      `http://localhost:6060/api/relationships/groups-by-year/?getgroop=${gname}`
+      `${import.meta.env.VITE_URL}/api/relationships/groups-by-year/?getgroop=${gname}`
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);

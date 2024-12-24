@@ -30,7 +30,7 @@ const DeadliestAttackTypes: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:6060/api/analysis/deadliest-attack-types/");
+        const response = await fetch(`${import.meta.env.VITE_URL}/api/analysis/deadliest-attack-types/`);
         const result = await response.json();
         setData(Array.isArray(result) ? result : []);
         setFilteredData(Array.isArray(result) ? result : []);

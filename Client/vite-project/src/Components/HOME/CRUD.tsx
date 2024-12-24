@@ -3,7 +3,7 @@ import  {TerrorModel} from "../../Interface/Interfaces"
 import {AnalysisContext,Props,TerrorProps} from "../../Providers/AnalysisProvider"
 import useFatch from '../../Hooks/UseFetch'
 
-const url = "http://localhost:6060/crud/"
+const url = `${import.meta.env.VITE_URL}/crud/`
 
 const CRUD = () => {
     const {terrors, setTerrors} = useContext(AnalysisContext)

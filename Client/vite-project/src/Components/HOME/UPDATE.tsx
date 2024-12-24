@@ -26,7 +26,7 @@ const UpdateTerror: React.FC = () => {
   // Fetch existing data by ID
   const fetchTerrorData = async () => {
     try {
-      const response = await fetch(`http://localhost:6060/crud/${id}`);
+      const response = await fetch(`${import.meta.env.VITE_URL}/crud/${id}`);
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
@@ -39,7 +39,7 @@ const UpdateTerror: React.FC = () => {
 
   const handleUpdate = async () => {
     try {
-      const response = await fetch(`http://localhost:6060/crud/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_URL}/crud/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

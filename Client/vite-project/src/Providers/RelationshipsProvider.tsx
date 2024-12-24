@@ -1,8 +1,8 @@
 
 import {  TerrorModel} from "../Interface/Interfaces";
-import useFatch from "../Hooks/fetch";
+import useFatch from "../Hooks/UseFetch";
 import React, { SetStateAction, useEffect, useState } from "react";
-const url = "http://localhost:6060/api/relationships"
+const url = "${import.meta.env.VITE_URL}/api/relationships"
 
 
 export interface Props {

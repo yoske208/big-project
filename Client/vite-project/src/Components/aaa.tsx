@@ -26,7 +26,7 @@ const Aaa = () => {
       <button onClick={() => get5ByBigOrganizatoion("Eastern Europe")}>
         avg by big organization
       </button>
-      <button onClick={() => organizationByYear(1970)}>
+      <button onClick={() => organizationByYear(1970,1980)}>
          organization by year
       </button>
       <button onClick={() => organizationByZone("White extremists")}>

@@ -11,7 +11,7 @@ const app: Express = express();
 
 
 app.use(cors({
-  origin: "http://localhost:5173", // אפשר גישה רק ללקוח
+  origin: "*", // אפשר גישה רק ללקוח
   credentials: true, // כדי לאפשר שליחת עוגיות
 }));
 
