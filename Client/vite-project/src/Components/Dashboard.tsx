@@ -10,6 +10,7 @@ import TopAllOrganizations from "./TopAllOrganizations";
 import AvgAllZones from "./AvgAllZones";
 import IncidentTrendsBetwen2 from "./IncidentTrendsBetwen2";
 import YearByOrganizations from "./YearByOrganizations";
+import { Link } from "react-router-dom";
 
 interface MarkerData {
   lat: number;
@@ -74,6 +75,9 @@ const Dashboard: React.FC = () => {
   };
 
   return (
+    <>
+
+    <Link to="/crud" ><button>CRUD</button></Link>
     <div style={{ display: "flex" }}>
       <div style={{ width: "50%", padding: "10px" }}>
         <h2>דשבורד לניתוח נתוני אירועים</h2>
@@ -133,6 +137,7 @@ const Dashboard: React.FC = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

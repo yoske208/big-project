@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
-import  {TerrorModel} from "../Interface/Interfaces"
-import {AnalysisContext,Props,TerrorProps} from "../Providers/AnalysisProvider"
-import useFatch from '../Hooks/UseFetch'
+import  {TerrorModel} from "../../Interface/Interfaces"
+import {AnalysisContext,Props,TerrorProps} from "../../Providers/AnalysisProvider"
+import useFatch from '../../Hooks/UseFetch'
 
 const url = "http://localhost:6060/crud/"
 
